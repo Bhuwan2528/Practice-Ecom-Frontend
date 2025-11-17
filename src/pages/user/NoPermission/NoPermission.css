@@ -1,0 +1,60 @@
+/* NoPermission.css */
+.no-permission-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: linear-gradient(135deg, #f3f4f7 0%, #e8ebf0 100%);
+  color: #1a1a1a;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.no-permission-card {
+  background: #fff;
+  padding: 50px 60px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.no-permission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.no-permission-emoji {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.no-permission-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.no-permission-text {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.no-permission-btn {
+  background: linear-gradient(90deg, #007bff, #00b4d8);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.no-permission-btn:hover {
+  background: linear-gradient(90deg, #0056b3, #0077b6);
+  transform: scale(1.05);
+}
