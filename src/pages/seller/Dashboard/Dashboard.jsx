@@ -14,7 +14,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/users/profile", {
+        const res = await axios.get("https://practice-ecom-backend.onrender.com/api/users/profile", {
           withCredentials: true,
         });
         setUser(res.data);

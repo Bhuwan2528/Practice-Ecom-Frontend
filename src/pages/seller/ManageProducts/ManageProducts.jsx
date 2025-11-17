@@ -11,7 +11,7 @@ const ManageProducts = () => {
   // Fetch seller products
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/products/seller", {
+      const res = await axios.get("https://practice-ecom-backend.onrender.com/api/products/seller", {
         withCredentials: true,
       });
       setProducts(res.data);
@@ -32,7 +32,7 @@ const ManageProducts = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/products/${productId}`, {
+      await axios.delete(`https://practice-ecom-backend.onrender.com/api/products/${productId}`, {
         withCredentials: true,
       });
       setProducts(products.filter((p) => p._id !== productId));

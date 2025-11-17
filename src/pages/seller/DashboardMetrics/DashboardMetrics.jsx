@@ -32,7 +32,7 @@ const DashboardMetrics = () => {
   useEffect(() => {
     const fetchMetrics = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/metrics/seller", {
+        const res = await axios.get("https://practice-ecom-backend.onrender.com/api/metrics/seller", {
           withCredentials: true,
         });
         setMetrics(res.data);

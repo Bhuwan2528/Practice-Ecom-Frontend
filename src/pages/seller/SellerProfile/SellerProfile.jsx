@@ -15,7 +15,7 @@ const SellerProfile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/user/profile", {
+        const res = await axios.get("https://practice-ecom-backend.onrender.com/api/user/profile", {
           withCredentials: true,
         });
         setFormData(res.data);
@@ -37,7 +37,7 @@ const SellerProfile = () => {
     e.preventDefault();
     try {
       const res = await axios.put(
-        "http://localhost:5000/api/user/profile",
+        "https://practice-ecom-backend.onrender.com/api/user/profile",
         formData,
         { withCredentials: true }
       );

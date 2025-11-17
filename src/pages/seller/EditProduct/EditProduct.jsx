@@ -21,7 +21,7 @@ const EditProduct = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/products/${id}`, {
+        const res = await axios.get(`https://practice-ecom-backend.onrender.com/api/products/${id}`, {
           withCredentials: true,
         });
         const product = res.data;
@@ -52,7 +52,7 @@ const EditProduct = () => {
 
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/products/${id}`,
+        `https://practice-ecom-backend.onrender.com/api/products/${id}`,
         {
           ...formData,
           tags: formData.tags.split(",").map((t) => t.trim()),
