@@ -2,6 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import SearchBar from "../../../Components/SearchBar/SearchBar"; 
 import "./Home.css";
+import { Link } from "react-router-dom";
+
 
 const Home = () => {
   const navigate = useNavigate();
@@ -26,8 +28,9 @@ const Home = () => {
         />
 
         <div className="hero-cta">
-          <a href="/products" className="cta-link">Explore Our Products</a>
+          <Link to="/products" className="cta-link">Explore Our Products</Link>
         </div>
+
       </div>
     </header>
   );
