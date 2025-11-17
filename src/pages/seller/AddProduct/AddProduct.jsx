@@ -26,6 +26,7 @@ const handleSubmit = async (e) => {
       },
       credentials: "include", // ✅ send cookie automatically
       body: JSON.stringify(form),
+      withCredentials: true
     });
 
     const data = await res.json();

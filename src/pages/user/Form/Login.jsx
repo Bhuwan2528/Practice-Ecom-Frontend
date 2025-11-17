@@ -26,6 +26,7 @@ const Login = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
         credentials: "include", // for cookies
+        withCredentials: true,
       });
 
       const data = await res.json();

@@ -15,13 +15,14 @@ const Products = () => {
 
     if (searchTerm) {
       // ⭐ SEARCH API
-      fetch(`https://practice-ecom-backend.onrender.com/api/products/search?q=${searchTerm}`)
+      fetch(`https://practice-ecom-backend.onrender.com/api/products/search?q=${searchTerm}`,
+      {withCredentials: true})
         .then((res) => res.json())
         .then((data) => setProducts(data))
         .catch((err) => console.error(err));
     } else {
       // ⭐ NORMAL PRODUCTS
-      fetch("https://practice-ecom-backend.onrender.com/api/products")
+      fetch("https://practice-ecom-backend.onrender.com/api/products", { withCredentials: true })
         .then((res) => res.json())
         .then((data) => setProducts(data))
         .catch((err) => console.error(err));
@@ -33,6 +34,7 @@ const Products = () => {
       const res = await fetch(`https://practice-ecom-backend.onrender.com/api/products/buy/${id}`, {
         method: "POST",
         credentials: "include",
+        withCredentials: true
       });
       const data = await res.json();
       alert(data.message);
